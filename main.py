@@ -13,16 +13,11 @@ height = 1080
 
 # Obtaining web camera
 cap = cv2.VideoCapture(0)
-# cap.set(widthIndex, width)
 cap.set(3, width)
-# cap.set(heightIndex, height)
 cap.set(4, height)
 
 while True:
-
     success, img = cap.read()
-
-    # if something:
     height, width, *rest = img.shape
 
     data = process_image(img)
